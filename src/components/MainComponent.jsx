@@ -43,7 +43,7 @@ const MainComponent = () => {
             {!loading ? (
               <h3>TOP SECRET! DO NOT PRESS!</h3>
             ) : (
-              <h3>YOUR LOSS...</h3>
+              <h3>Now see what you've done...</h3>
             )}
             {loading ? (
               <progress value={progress} max={100} />
