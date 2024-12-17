@@ -24,6 +24,14 @@ const MainComponent = () => {
       return () => clearInterval(interval);
     }
   }, [loading, progress]);
+
+  useEffect(() => {
+    if(typeof window !== undefined){
+      if(window.localStorage.getItem("showFinalText")){
+        setShowQuestionary(true);
+      }
+    }
+  }, []);
   return (
     <>
       <div className={styles.wrapper}>
