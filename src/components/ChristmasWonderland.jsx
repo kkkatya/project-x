@@ -41,11 +41,11 @@ const ChristmasWonderland = () => {
       <img
         style={{
           position: "absolute",
-          top: "-150px",
-          left: "-100px",
+          top: "-130px",
+          left: "-5%",
           right: 0,
           margin: "auto",
-          width: "2400px",
+          width: "110%",
         }}
         src={`${window.location.href}/lights.png`}
       />
@@ -53,7 +53,7 @@ const ChristmasWonderland = () => {
         style={{
           position: "absolute",
           bottom: "-20px",
-          left: "728px",
+          left: "calc(50% - 229px)",
           zIndex: 3,
         }}
         src={`${window.location.href}/fireplace.webp`}

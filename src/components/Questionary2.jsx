@@ -76,7 +76,7 @@ const Questionary = ({setShowFinalText}) => {
       <a onClick={handleLink}
         style={{
           position: "fixed",
-          left: "707px",
+          left: "calc(50% - 252px)",
           bottom: "20px",
           zIndex: 1,
           opacity: 0.05 * currentQ,
