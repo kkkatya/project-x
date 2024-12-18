@@ -34,11 +34,11 @@ const Questionary = () => {
 
   const handleLink = () => {
     setShowFinalText(true);
-    if(typeof window !== undefined){
+    if (typeof window !== undefined) {
       window.localStorage.setItem("currentQ", currentQ);
       window.localStorage.setItem("showFinalText", true);
     }
-  }
+  };
   const handleSubmit = (event) => {
     if (event.key === "Enter") {
       if (
@@ -59,7 +59,7 @@ const Questionary = () => {
   };
 
   useEffect(() => {
-    if(typeof window !== undefined){
+    if (typeof window !== undefined) {
       setCurrentQ(window.localStorage.getItem("currentQ") || 0);
       setShowFinalText(window.localStorage.getItem("showFinalText") || false);
     }
@@ -83,10 +83,22 @@ const Questionary = () => {
         </>
       ) : (
         <>
-          <h3>Alright, you win this one.</h3>
-          {showFinalText ? <h3>Come here for more later.</h3> : <a className={styles.successLink} href="https://www.humblebundle.com/?gift=kRdeDHSCYKNhu3A5" target="_blank" onClick={handleLink}>
-            Press here
-          </a>}
+          {!showFinalText && <h3>Alright, you win this one.</h3>}
+          {showFinalText ? (
+            <>
+              <img style={{position: "absolute"}} src={window.location.href + "/work-in-progress.png"} />
+              <h3>Hold on! We're working on it.</h3>
+            </>
+          ) : (
+            <a
+              className={styles.successLink}
+              href="https://www.humblebundle.com/?gift=kRdeDHSCYKNhu3A5"
+              target="_blank"
+              onClick={handleLink}
+            >
+              Press here
+            </a>
+          )}
         </>
       )}
     </div>
