@@ -12,25 +12,29 @@ const Questionary = ({setShowFinalText}) => {
       q: "Nothing beats the festive aroma Of cinnamon and Oranges, as we Deck the halls and Light the tree, Enjoying the Snowfall together.",
       a: "noodles",
     },
-    { q: "When I walk past this tree, how many caps do I see?", a: "12" },
+    { q: "I think there's something off with the living room light. What's this color?", a: "green" },
 
     {
       q: "In the Adverture Time episode Holly Jolly Christmas, what thing is pictured on BMO's sweater?",
       a: "snowman",
     },
     {
-      q: "01100111 01100001 01101110 01100111 01101001 01101110 01101001",
-      a: "gangini",
+      q: "The Bible of this triangular demon might hold the answer to this one.",
+      a: "teeth",
     },
     {
-      q: "Ask your crazy neighbor for the password.",
-      a: "pickle",
+      q: "What's the number on the robot frog?",
+      a: ["4", "four"],
     },
+    {
+      q: "There might be a file on your desktop holding a password.",
+      a: "cookie"
+    }
   ];
   const [answer, setAnswer] = useState("");
   const [currentQ, setCurrentQ] = useState(0);
   const [wrong, setWrong] = useState(false);
-  
+
   const handleLink = () => {
     setShowFinalText(true);
   };
@@ -67,7 +71,7 @@ const Questionary = ({setShowFinalText}) => {
           />
         </>
       ) : (
-        <h3>Maybe you're still missing something...</h3>
+        <h3>Maybe you're still missing something... Look closer.</h3>
       )}
       <a onClick={handleLink}
         style={{

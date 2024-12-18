@@ -9,13 +9,13 @@ const ChristmasWonderland = () => {
     <div className={styles.background}>
       <div className={styles.wrapper}>
         <h1>Welcome to Christmas Extravaganza!</h1>
-        {!showQuestionary ? (
+        {!showQuestionary ? (<><h3>Don't try it on your phone.</h3>
           <button
             onClick={() => setShowQuestionary(true)}
             className={styles.startButton}
           >
             Let's begin
-          </button>
+          </button></>
         ) : 
           !showFinalText ? <Questionary2 setShowFinalText={setShowFinalText}/> : <Gnome />
         }
