@@ -86,7 +86,7 @@ const Questionary = () => {
           {!showFinalText && <h3>Alright, you win this one.</h3>}
           {showFinalText ? (
             <>
-              <img style={{position: "absolute"}} src={window.location.href + "/work-in-progress.png"} />
+              <img style={{position: "absolute", left: 0, right: 0, margin: "auto", top: "-200px"}} src={window.location.href + "/work-in-progress.png"} />
               <h3>Hold on! We're working on it.</h3>
             </>
           ) : (
